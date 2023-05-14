@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/circle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMontserrat:300,400,600,700">
+
+    <link rel="stylesheet" href="icons/fontawesome/css/fontawesome-all.min.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="icons/Iconsmind__Ultimate_Pack/Line%20icons/styles.min.css">
+    <!-- iconsmind.com Icons -->
+    <link rel="icon" href="icons/stylized-tv-3d-model-max-obj-fbx.png">
+
+
+
+    <title>CarsonTV | Home</title>
+</head>
+
+<body>
+    <div id="sidebar-bg">
+
+        <header id="videohead-pro" class="sticky-header">
+            <div id="video-logo-background"><a href="index.html"><img src="images/logo-video-layout.png" alt="Logo"></a></div>
+
+            <div id="video-search-header">
+                <div id="search-icon-more"></div>
+                <input type="text" placeholder="Search for Movies or TV Series" aria-label="Search" id="searchBar">
+                <div id="video-search-header-filtering">
+                    <form id="video-search-header-filtering-padding">
+                        <div class="row">
+                            <div class="col-sm extra-padding">
+                                <h5>Type:</h5>
+
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <label class="checkbox-pro-container">Movies
+										  <input type="checkbox" checked="checked" id="movies-type">
+										  <span class="checkmark-pro"></span>
+										</label>
+
+                                        <label class="checkbox-pro-container">TV Series
+										  <input type="checkbox" checked="checked" id="tv-type">
+										  <span class="checkmark-pro"></span>
+										</label>
+                                    </div>
+                                    <!-- close .col -->
+                                </div>
+                                <!-- close .row -->
+
+                                <div class="dotted-dividers-pro"></div>
+                            </div>
+                            <!-- close .col -->
+                            <div class="col-sm extra-padding">
+                                <h5>Genres:</h5>
+                                <select class="custom-select" id="genreSearch">
+								  <option value="0" selected>All Genres</option>
+								  <option value="1">Action</option>
+								  <option value="2">Adventure</option>
+								  <option value="3">Drama</option>
+								  <option value="4">Animation</option>
+								  <option value="5">Documentary</option>
+								  <option value="6">Drama</option>
+								  <option value="9">Fantasy</option>
+								  <option value="10">Romance</option>
+								  <option value="11">Sci-Fi</option>
+								  <option value="12">Western</option>
+								</select>
+                                <div class="dotted-dividers-pro"></div>
+                            </div>
+                            <!-- close .col -->
+                            <div class="col-sm extra-padding extra-range-padding">
+                                <h5>Average Rating:</h5>
+                                <input class="range-example-rating-input" type="text" min="0" max="10" value="4,10" step="1" />
+                                <!-- JS is under /js/script.jss -->
+                            </div>
+                            <!-- close .col -->
+                        </div>
+                        <!-- close .row -->
+                        <div id="video-search-header-buttons">
+                            <a class="btn btn-green-pro" id="searchButton">Search</a>
+                        </div>
+                        <!-- close #video-search-header-buttons -->
+                    </form>
+                    <!-- #video-search-header-filtering-padding -->
+                </div>
+                <!-- close #video-search-header-filtering -->
+            </div>
+            <!-- close .video-search-header -->
+
+            <div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
+
+            <div id="header-user-profile">
+				<div id="header-user-profile-click" class="noselect" style="font-size: 1.75rem; color: black">
+					<i class="fas fa-cogs"></i>
+				</div>
+			</div>
+
+            <div class="clearfix"></div>
+
+            <nav id="mobile-navigation-pro">
+
+                <ul id="mobile-menu-pro">
+                    <li class="current-menu-item men_item">
+                        <a>
+						<span class="icon-Old-TV"></span>
+	                TV Series
+	              </a>
+                        <li>
+                            <li class="men_item movie_menu_item">
+                                <a>
+						<span class="icon-Reel"></span>
+	                Movies
+	              </a>
+                            </li>
+                </ul>
+                <div class="clearfix"></div>
+
+                <div id="search-mobile-nav-pro">
+                    <input type="text" placeholder="Search for Movies or TV Series" aria-label="Search" id="mobileSearch">
+                </div>
+
+            </nav>
+
+        </header>
+
+
+
+        <nav id="sidebar-nav">
+            <!-- Add class="sticky-sidebar-js" for auto-height sidebar -->
+            <ul id="vertical-sidebar-nav" class="sf-menu">
+                <li class="normal-item-pro current-menu-item men_item" id="tv_menu_item">
+                    <a>
+						<span class="icon-Old-TV"></span>
+                  TV Series
+                </a>
+                </li>
+                <li class="normal-item-pro men_item movie_menu_item">
+                    <a>
+						<span class="icon-Reel"></span>
+                  Movies
+                </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </nav>
+
+        <main id="col-main">
+
+
+
+            <div class="flexslider progression-studios-dashboard-slider">
+                <ul class="slides" id="vue_slider">
+                    <li class="progression_studios_animate_left">
+                        <div class="progression-studios-slider-dashboard-image-background" :style="getBackgroundStyle(title.wide)">
+                            <div class="progression-studios-slider-display-table">
+                                <div class="progression-studios-slider-vertical-align">
+
+                                    <div class="container">
+
+                                        <a class="progression-studios-slider-play-btn afterglow" :href="'view.html?id=' + title['imdb_id']"><i class="fas fa-play"></i></a>
+
+
+
+                                        <div class="progression-studios-slider-dashboard-caption-width">
+                                            <div class="progression-studios-slider-caption-align">
+                                                <h6 class="light-fonts-pro">{{ getType() }}</h6>
+                                                <h2 class="light-fonts-pro"><a :href="'view.html?id=' + title['imdb_id']">{{ title["title"] }}</a></h2>
+                                                <ul class="progression-studios-slider-meta light-fonts-pro">
+                                                    <li>{{ title["release_date"]}}</li>
+                                                    <li>{{ title["duration"]}} mins.</li>
+                                                    <li>{{ title["genres"][0]}}</li>
+                                                </ul>
+                                                <p class="progression-studios-slider-description light-fonts-pro">{{ title["description"]}}</p>
+
+                                                <a class="btn btn-green-pro btn-slider-pro btn-shadow-pro afterglow" :href="'view.html?id=' + title['imdb_id']"><i class="fas fa-play"></i>Watch</a>
+
+
+                                                <div :class="'c100 p'+title.rating*10 + ' small ' + getColor(title.rating)" style="float: right; zoom:.8">
+                                                    <span :style="'font-weight: bold; color:'+getColor(title.rating)">{{ title.rating }}</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="clearfix"></div>
+
+                                            </div>
+                                            <!-- close .progression-studios-slider-caption-align -->
+                                        </div>
+                                        <!-- close .progression-studios-slider-caption-width -->
+
+                                    </div>
+                                    <!-- close .container -->
+
+                                </div>
+                                <!-- close .progression-studios-slider-vertical-align -->
+                            </div>
+                            <!-- close .progression-studios-slider-display-table -->
+
+                            <div class="progression-studios-slider-mobile-background-cover"></div>
+                        </div>
+                        <!-- close .progression-studios-slider-image-background -->
+                    </li>
+                </ul>
+            </div>
+            <!-- close .progression-studios-slider - See /js/script.js file for options -->
+
+            <ul class="dashboard-genres-pro">
+                <li class="genre_button">
+                    <img src="images/genres/drama.png" alt="Drama">
+                    <h6>Drama</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/comedy.png" alt="Comedy">
+                    <h6>Comedy</h6>
+                </li class="genre_button">
+                <li class="genre_button">
+                    <img src="images/genres/action.png" alt="Action">
+                    <h6>Action</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/romance.png" alt="Romance">
+                    <h6>Romance</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/fantasy.png" alt="Fantasy">
+                    <h6>Fantasy</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/sci-fi.png" alt="Sci-Fi">
+                    <h6>Sci-Fi</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/western.png" alt="Western">
+                    <h6>Western</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/adventure.png" alt="Adventure">
+                    <h6>Adventure</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/animation.png" alt="Animation">
+                    <h6>Animation</h6>
+                </li>
+                <li class="genre_button">
+                    <img src="images/genres/documentary.png" alt="Documentary">
+                    <h6>Documentary</h6>
+                </li>
+            </ul>
+
+            <div class="clearfix"></div>
+
+            <div class="dashboard-container" id="pannelCont">
+
+                <h4 class="heading-extra-margin-bottom">{{ header }}</h4>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3" v-for='title in titles'>
+                        <div class="item-listing-container-skrn title">
+                            <a :href="'view.html?id=' + title['imdb_id']"><img :src="addheader(title.tall)" :alt="title.title"></a>
+                            <div class="progressDiv">
+                                <div :style="'width: ' + title.progress +'%;'"></div>
+                            </div>
+                            <div class="item-listing-text-skrn">
+                                <div class="item-listing-text-skrn-vertical-align">
+                                    <h6 id="titleTitle"><a :href="'view.html?id=' + title['imdb_id']">{{ title.title }}</a></h6>
+                                    <div :class="' c100 p'+title.rating*10 + ' small ' + getColor(title.rating)" style="float: right; zoom:.5;">
+                                        <span style="font-weight: bold;">{{ title.rating }}</span>
+                                        <div class="slice">
+                                            <div class="bar"></div>
+                                            <div class="fill"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- close .item-listing-text-skrn-vertical-align -->
+                            </div>
+                            <!-- close .item-listing-text-skrn -->
+                        </div>
+                        <!-- close .item-listing-container-skrn -->
+                    </div>
+                    <!-- close .col -->
+                </div>
+                <!-- close .row -->
+
+            </div>
+            <!-- close .dashboard-container -->
+        </main>
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Select JSON Pointer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Hello, and welcome to CarsonTV! This is an open-source media streaming platform for custom content. Think of it like a video player, like vlc or windows media player, that has a friendly user interface and remembers where you are in a tv-show or movie.
+                            YOU PROVIDE YOUR OWN CONTENT! See the Git-Hub read-me for instructions on how to create the JSON Pointer, then load it below. You can alway reset the JSON, but you will lose you saved progress in doing so.
+                        </p>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="saveChange">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- close #sidebar-bg-->
+
+    <!-- Required Framework JavaScript -->
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <!-- jQuery -->
+    <script src="js/libs/popper.min.js" defer></script>
+    <!-- Bootstrap Popper/Extras JS -->
+    <script src="js/libs/bootstrap.min.js" defer></script>
+    <!-- Bootstrap Main JS -->
+    <!-- All JavaScript in Footer -->
+
+    <!-- Additional Plugins and JavaScript -->
+    <script src="js/navigation.js" defer></script>
+    <!-- Header Navigation JS Plugin -->
+    <script src="js/jquery.flexslider-min.js" defer></script>
+    <!-- FlexSlider JS Plugin -->
+    <script src="js/jquery-asRange.min.js" defer></script>
+    <!-- Range Slider JS Plugin -->
+    <script src="js/circle-progress.min.js" defer></script>
+    <!-- Circle Progress JS Plugin -->
+    <script src="js/jquery.scrollTo.min.js" defer></script>
+    <!-- Scroll Plugin-->
+    <script src="js/afterglow.min.js" defer></script>
+    <!-- Video Player JS Plugin -->
+    <script src="js/script.js" defer></script>
+    <!-- Ipmort Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Custom Document Ready JS -->
+    <script src="js/script-dashboard.js" defer></script>
+    <!-- Custom Document Ready for Dashboard Only JS -->
+    <script src="DataGenerator/example.js"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

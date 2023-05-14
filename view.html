@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/circle.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMontserrat:300,400,600,700">
+
+	<link rel="stylesheet" href="icons/fontawesome/css/fontawesome-all.min.css">
+	<!-- FontAwesome Icons -->
+	<link rel="stylesheet" href="icons/Iconsmind__Ultimate_Pack/Line%20icons/styles.min.css">
+	<!-- iconsmind.com Icons -->
+	<link rel="icon" href="icons/stylized-tv-3d-model-max-obj-fbx.png">
+
+
+
+	<title>CarsonTV | Watch</title>
+</head>
+
+<body>
+	<div id="sidebar-bg">
+
+		<header id="videohead-pro" class="sticky-header">
+			<div id="video-logo-background"><a href="index.html"><img src="images/logo-video-layout.png" alt="Logo"></a></div>
+
+			<div id="video-search-header">
+				<div id="search-icon-more"></div>
+				<input type="text" placeholder="Search for Movies or TV Series" aria-label="Search" id="searchBar">
+				<div id="video-search-header-filtering">
+					<form id="video-search-header-filtering-padding">
+						<div class="row">
+							<div class="col-sm extra-padding">
+								<h5>Type:</h5>
+
+								<div class="row">
+									<div class="col-sm">
+										<label class="checkbox-pro-container">Movies
+										  <input type="checkbox" checked="checked" id="movies-type">
+										  <span class="checkmark-pro"></span>
+										</label>
+
+										<label class="checkbox-pro-container">TV Series
+										  <input type="checkbox"  checked="checked" id="tv-type">
+										  <span class="checkmark-pro"></span>
+										</label>
+									</div>
+									<!-- close .col -->
+									<!-- close .col -->
+								</div>
+								<!-- close .row -->
+
+								<div class="dotted-dividers-pro"></div>
+							</div>
+							<!-- close .col -->
+							<div class="col-sm extra-padding">
+								<h5>Genres:</h5>
+								<select class="custom-select" id="genreSearch">
+								  <option selected>All Genres</option>
+								  <option value="1">Action</option>
+								  <option value="2">Adventure</option>
+								  <option value="3">Drama</option>
+								  <option value="4">Animation</option>
+								  <option value="5">Documentary</option>
+								  <option value="6">Drama</option>
+								  <option value="9">Fantasy</option>
+								  <option value="10">Romance</option>
+								  <option value="11">Sci-Fi</option>
+								  <option value="12">Western</option>
+								</select>
+								<div class="dotted-dividers-pro"></div>
+							</div>
+							<!-- close .col -->
+							<div class="col-sm extra-padding extra-range-padding">
+								<h5>Average Rating:</h5>
+								<input class="range-example-rating-input" type="text" min="0" max="10" value="4,10" step="1" />
+								<!-- JS is under /js/script.jss -->
+							</div>
+							<!-- close .col -->
+						</div>
+						<!-- close .row -->
+						<div id="video-search-header-buttons">
+							<a href="#!" class="btn btn-green-pro">Filter Search</a>
+							<a href="#!" class="btn">Reset</a>
+						</div>
+						<!-- close #video-search-header-buttons -->
+					</form>
+					<!-- #video-search-header-filtering-padding -->
+				</div>
+				<!-- close #video-search-header-filtering -->
+			</div>
+			<!-- close .video-search-header -->
+
+			<div id="mobile-bars-icon-pro" class="noselect"><i class="fas fa-bars"></i></div>
+			<div class="clearfix"></div>
+
+			<nav id="mobile-navigation-pro">
+
+				<ul id="mobile-menu-pro">
+					<li>
+						<a href="index.html">
+						<span class="icon-Old-TV"></span>
+	                TV Series
+	              </a>
+						<li>
+							<li>
+								<a class="movieButton">
+						<span class="icon-Reel"></span>
+	                Movies
+	              </a>
+								<li>
+									<a href="#!">
+						<i class="far fa-bell"></i>
+						<span class="user-notification-count">3</span>
+	                Notifications
+	              </a>
+								</li>
+				</ul>
+				<div class="clearfix"></div>
+
+				<div id="search-mobile-nav-pro">
+					<input type="text" placeholder="Search for Movies or TV Series" aria-label="Search" id="mobileSearch">
+				</div>
+
+			</nav>
+
+		</header>
+
+
+
+		<nav id="sidebar-nav">
+			<!-- Add class="sticky-sidebar-js" for auto-height sidebar -->
+			<ul id="vertical-sidebar-nav" class="sf-menu">
+				<li class="normal-item-pro">
+					<a href="index.html">
+						<span class="icon-Old-TV"></span>
+                  TV Series
+                </a>
+				</li>
+				<li class="normal-item-pro">
+					<a class="movieButton">
+						<span class="icon-Reel"></span>
+                  Movies
+                </a>
+				</li>
+
+			</ul>
+			<div class="clearfix"></div>
+		</nav>
+
+
+		<div id="content-sidebar-pro">
+
+			<div id="content-sidebar-image">
+				<img :src="header + title.tall" alt="Movie Poster">
+			</div>
+
+			<div class="content-sidebar-section">
+				<h2 class="content-sidebar-sub-header">{{title.title}}</h2>
+			</div>
+			<!-- close .content-sidebar-section -->
+
+			<div class="content-sidebar-section">
+				<h4 class="content-sidebar-sub-header">Release Date</h4>
+				<div class="content-sidebar-short-description">{{ title["release_date"] }}</div>
+			</div>
+			<!-- close .content-sidebar-section -->
+
+			<div class="content-sidebar-section">
+				<h4 class="content-sidebar-sub-header">Length</h4>
+				<div class="content-sidebar-short-description">{{ title.duration }} mins</div>
+			</div>
+			<!-- close .content-sidebar-section -->
+
+
+			<!-- close .content-sidebar-section -->
+
+		</div>
+		<!-- close #content-sidebar-pro -->
+
+
+		<main id="col-main-with-sidebar">
+
+			<div>
+				<video id="main_video" style="object-fit: fill"> </video>
+			</div>
+
+			<div id="movie-detail-rating">
+				<div class="dashboard-container">
+					<div class="row" id="ratingBar">
+						<h3 id="epTitle" style="float:left;">{{ title }}</h3>
+						<div class="col-sm">
+							<a class="btn btn-green-pro btn-slider-pro btn-shadow-pro afterglow" id="trailer_Button"><i class="fas fa-play"></i>Watch Trailer</a>
+						</div>
+						<div class="col-sm">
+							<h6>User Rating</h6>
+							<div :class="'c100 p'+rating*10 + ' small ' + getColor(rating)" style="float: right; zoom:.5">
+								<span :style="'font-weight: bold; color:'+getColor(rating)">{{ rating }}</span>
+								<div class="slice">
+									<div class="bar"></div>
+									<div class="fill"></div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<!-- close .row -->
+				</div>
+				<!-- close .dashboard-container -->
+			</div>
+			<!-- close #movie-detail-rating -->
+
+			<div class="dashboard-container">
+				<div class="movie-details-section" id="desBox">
+					<h2>Storyline</h2>
+					<p>{{ description }}</p>
+				</div>
+				<!-- close .movie-details-section -->
+
+				<div id="seriesCont">
+					<ul class="dashboard-sub-menu" id="seasonBox">
+						<li v-for="(item, index) in sList" class="seasonButton" :data-index="index"><a style="user-select:none;">{{ item.title }}</a></li>
+
+					</ul>
+					<!-- close .dashboard-sub-menu -->
+
+					<div class="movie-details-section" id="epBox">
+						<div class="row">
+							<div class="col-12 col-md-6 col-lg-6 col-xl-4 episodes" :data-index="index" v-for="(episode, index) in episodes">
+								<div class="item-listing-container-skrn title">
+									<a class="episode"><img :src="header + episode.tall" alt="Listing">
+									<div class="progressDiv">
+										<div :style="'width: ' + episode.progress +'%;'"></div>
+									</div>
+									<div class="item-listing-text-skrn">
+										<div class="item-listing-text-skrn-vertical-align">
+
+											<h6>{{ episode.title }}</h6>
+										</div>
+										<!-- close .item-listing-text-skrn-vertical-align -->
+									</div>
+								</a>
+									<!-- close .item-listing-text-skrn -->
+								</div>
+								<!-- close .item-listing-container-skrn -->
+							</div>
+							<!-- close .col -->
+
+						</div>
+						<!-- close .row -->
+
+					</div>
+				</div>
+				<!-- close .movie-details-section -->
+				<!--Close .seriesCont-->
+			</div>
+			<!-- close .dashboard-container -->
+		</main>
+
+
+	</div>
+	<!-- close #sidebar-bg-->
+
+	<!-- Required Framework JavaScript -->
+	<script src="js/libs/jquery-3.3.1.min.js"></script>
+	<!-- jQuery -->
+	<script src="js/libs/popper.min.js" defer></script>
+	<!-- Bootstrap Popper/Extras JS -->
+	<script src="js/libs/bootstrap.min.js" defer></script>
+	<!-- Bootstrap Main JS -->
+	<!-- All JavaScript in Footer -->
+
+	<!-- Additional Plugins and JavaScript -->
+	<script src="js/navigation.js" defer></script>
+	<!-- Header Navigation JS Plugin -->
+	<script src="js/jquery.flexslider-min.js" defer></script>
+	<!-- FlexSlider JS Plugin -->
+	<script src="js/jquery-asRange.min.js" defer></script>
+	<!-- Range Slider JS Plugin -->
+	<script src="js/circle-progress.min.js" defer></script>
+	<!-- Circle Progress JS Plugin -->
+	<script src="js/jquery.scrollTo.min.js" defer></script>
+    <!-- Scroll Plugin-->
+	<script src="js/plyr.js"></script>
+	<!-- Video Player JS Plugin -->
+	<script src="js/script.js" defer></script>
+	<!-- Custom Document Ready JS -->
+	<script src="DataGenerator/example.js"></script>
+
+	<script src="js/script-dashboard.js" defer></script>
+	<!-- Custom Document Ready for Dashboard Only JS -->
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<script src="view.js"></script>
+
+</body>
+
+</html>
